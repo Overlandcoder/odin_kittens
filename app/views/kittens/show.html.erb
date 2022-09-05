@@ -2,3 +2,7 @@
 <b>Age: </b><%= @kitten.age %>
 <b>Cuteness: </b><%= @kitten.cuteness %>
 <b>Softness: </b><%= @kitten.softness %>
+
+<br><br><%= link_to "Edit", edit_kitten_path %>
+<%= link_to "Delete", kitten_path(@kitten),
+      data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
